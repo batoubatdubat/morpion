@@ -1,3 +1,17 @@
+const socket = io();
+
+// Le joueur rejoint la room correspondant à son jeu
+socket.emit("rejoindre_room", "morpion2"); // tu peux changer le nom selon le mode
+
+// Quand l’autre joueur joue
+socket.on("maj_grille", (data) => {
+  console.log("Coup reçu :", data);
+  // Exemple : applique le symbole sur la grille
+  cases2[data.caseIndex].textContent = data.symbole;
+});
+
+
+
 
 const caseSimple = document.querySelectorAll('#jeu .case');
 const resultat = document.getElementById('resultat');
@@ -710,6 +724,12 @@ buttonresetScore2.addEventListener('click', function(){
 
 cases2.forEach(function(caseElement, index) {
     caseElement.addEventListener('click', function() {
+
+        socket.emit("jouer_coup", {
+        room: "morpion2",
+        caseIndex: index,
+        symbole: "X" // ou "O" selon le joueur
+        });
         console.log("click case : ", index);
         
         afficherTexte(score2, "Score " + joueur1_2 +" : "+ scoreX2 + "-" + scoreO2 + " : Score " + joueur2_2);
