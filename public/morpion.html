@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Morpion</title>
+    <link rel="stylesheet" href="morpion.css">
+    
+</head>
+    <body>
+
+    <!-- Page d'acceuil -->
+
+    <div id="acceuil">
+
+        <h1 id="titreAcceuil">Bienvenue sur le jeu du Morpion</h1>
+        <p id="regle">Voici les règles du jeu <a href="https://fr.wikipedia.org/wiki/Tic-tac-toe"> ici</a></p>
+        <label for="name1">Entrez nom du joueur 1 : </label>
+        <input type="text" id="name1" name="name1" maxlength="10" placeholder="10 caractères max">
+        <br>
+        <label for="name2">Entrez nom du joueur 2 : </label>
+        <input type="text" id="name2" name="name2"  maxlength="10" placeholder="10 caractères max">
+        <br>
+        <br>
+        <br>
+        <button id="jouer" class="favorite styled">Morpion Simple</button>
+        <br>
+        <br>
+        <button id="jouerUltime" class="favorite styled">Morpion Ultimate</button>
+        <br>
+        <br>
+        <button id="jouer2" class="favorite styled">Morpion 2</button>
+
+
+    </div>
+
+    <!-- Page de jeu du morpion-->
+    
+    <div id="jeu" style="display: none;">
+
+        <button id="retour" class="favorite styled">Retour Acceuil</button>
+        <h1 id="titreJeu">Morpion</h1>
+        <div class="container">
+            <button id="reset" class="favorite styled" >Recommencer</button>
+            <div id="score"></div>
+            <button id="resetScore" class="favorite styled">Reset Score</button>
+        </div>
+        <p id="tour"></p>
+        
+        <div class="grille">
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+        </div>
+
+        <p id="resultat"></p>
+        
+        
+    </div>
+
+
+    <!-- Page de jeu du morpion ULTIME -->
+
+    <div id="jeu-ultime">
+        <button id="retourUltime" class="favorite styled">Retour Acceuil</button>
+        <h1 id="titreJeuUltime"> Morpion Ultime</h1>
+
+        <div class="container">
+            <button id="resetUltime" class="favorite styled" >Recommencer</button>
+            <div id="scoreUltime"></div>
+            <button id="resetScoreUltime" class="favorite styled">Reset Score</button>
+        </div>
+        <p id="tourUltime"></p>
+        <div class="grande-grille">
+            <!-- Grille 0 -->
+            <div class="grilleUltime" data-grille="0">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 1 -->
+            <div class="grilleUltime" data-grille="1">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 2 -->
+            <div class="grilleUltime" data-grille="2">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 3 -->
+            <div class="grilleUltime" data-grille="3">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 4 -->
+            <div class="grilleUltime" data-grille="4">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 5 -->
+            <div class="grilleUltime" data-grille="5">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 6 -->
+            <div class="grilleUltime" data-grille="6">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 7 -->
+            <div class="grilleUltime" data-grille="7">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+            
+            <!-- Grille 8 -->
+            <div class="grilleUltime" data-grille="8">
+                <div class="caseUltime" data-case="0"></div>
+                <div class="caseUltime" data-case="1"></div>
+                <div class="caseUltime" data-case="2"></div>
+                <div class="caseUltime" data-case="3"></div>
+                <div class="caseUltime" data-case="4"></div>
+                <div class="caseUltime" data-case="5"></div>
+                <div class="caseUltime" data-case="6"></div>
+                <div class="caseUltime" data-case="7"></div>
+                <div class="caseUltime" data-case="8"></div>
+            </div>
+        </div>
+        
+        <p id="resultatUltime"></p>
+    </div>
+
+    <div id="jeu2" style="display: none;">
+
+        <button id="retour2" class="favorite styled">Retour Acceuil</button>
+        <h1 id="titreJeu">Morpion 2</h1>
+        <div class="container">
+            <button id="reset2" class="favorite styled" >Recommencer</button>
+            <div id="score2"></div>
+            <button id="resetScore2" class="favorite styled">Reset Score</button>
+        </div>
+        <p id="tour2"></p>
+        
+        <div class="grille2">
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+            <div class="case2"></div>
+        </div>
+
+        <p id="resultat2"></p>
+        
+        
+    </div>
+
+    <script src="morpion.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,213 @@
+body{
+    background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 50%, #95d5b2 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#acceuil{
+    text-align: center;
+    background: rgba(245, 241, 232, 0.95);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(45, 106, 79, 0.2);
+    max-width: 600px;
+}
+
+#titreAcceuil{
+    font-size: 65px;
+    font-weight: 700;
+    color: #2d6a4f;
+    margin-bottom: 15px;
+}
+
+#regle{
+    font-style: italic;
+    color: #52b788;
+    margin-bottom: 35px;
+}
+
+#regle a{
+    color: #2d6a4f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+label{
+    display: block;
+    color: #1b4332;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"]{
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #95d5b2;
+    border-radius: 12px;
+    font-size: 16px;
+    background: white;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    border-color: #52b788;
+}
+
+.styled{
+    border: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2d6a4f, #52b788);
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+.styled:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+}
+
+.styled:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#jeu, #jeu-ultime, #jeu2{
+    background: rgba(245, 241, 232, 0.95);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(45, 106, 79, 0.2);
+    max-width: 900px;
+    width: 100%;
+}
+
+#titreJeu, #titreJeuUltime{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: #2d6a4f;
+    margin-bottom: 25px;
+}
+
+.grille, .grille2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 350px;
+    margin: 35px auto;
+}
+
+.case, .case2{
+    aspect-ratio: 1;
+    border: 2px solid #95d5b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.case:hover, .case2:hover{
+    background-color: #d8f3dc;
+    transform: scale(1.05);
+}
+
+#tour, #tourUltime, #tour2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b4332;
+    margin: 20px 0;
+}
+
+#resultat, #resultatUltime, #resultat2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d6a4f;
+    margin: 25px 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    gap: 15px;
+}
+
+#score, #scoreUltime, #score2{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b4332;
+    padding: 12px 25px;
+    background: #e8dcc4;
+    border-radius: 12px;
+}
+
+.grande-grille{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 18px;
+    justify-content: center;
+    margin: 25px auto;
+}
+
+.grilleUltime{
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 6px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+}
+
+.caseUltime{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #95d5b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.caseUltime:hover{
+    background-color: #d8f3dc;
+    transform: scale(1.08);
+}
+
+.grilleActive{
+    border: 4px solid #40916c;
+    box-shadow: 0 0 25px rgba(64, 145, 108, 0.4);
+}
+
+.grise1{
+    color: #52b788;
+    opacity: 0.6;
+}
+
+.grise2{
+    color: #2d6a4f;
+    opacity: 0.6;
+}
