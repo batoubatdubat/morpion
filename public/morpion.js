@@ -298,10 +298,12 @@ input2.addEventListener('input', function(){
     if(input1.value == '' || input2.value == ''){
         buttonJouer.disabled = true;
         buttonJouerUltime.disabled = true;
+        buttonJouer2.disabled = true;
     }
     else{
         buttonJouer.disabled = false;
         buttonJouerUltime.disabled = false;
+        buttonJouer2.disabled = false;
     }
 })
 
